@@ -6,18 +6,33 @@ body{
 }
 
 #main-header{
-    height: 80px;
+    height: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color:#e0e5ff ;
-    padding: 0 20px;
+    padding: 0 5%;
 }
 
 #logo{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #E23744;
+}
+
+.menu-btn{
+    width: 3rem;
+    height: 3rem;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-around;
+    display: none;
+}
+
+.menu-btn span{
+    width: 100%;
+    height: 3px;
+    background-color: #E23744;
 }
 
 #main-header ul{
@@ -28,36 +43,79 @@ body{
 }
 
 #main-header li{
-    margin: 0 16px;
+    margin: 0 1rem;
 }
 
 #main-header nav a{
     color: #2b2b2b;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 #main-header nav a:hover{
     color: #f13a49;
 }
 
+#side-drawer{
+    width: 100%;
+    height: 100%;
+    background-color: #F0F8FF;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+}
+
+#side-drawer:target{
+    display: block;
+}
+
+#side-drawer header{
+    height: 5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 5%;
+}
+
+
+#side-drawer ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 4rem 1rem;
+}
+
+#side-drawer li{
+    margin: 1rem 0;
+}
+
+#side-drawer a{
+    color: #E23744;
+    font-size: 2rem;
+}
+
 main h1{
     text-align: center;
     color: #E23744;
-    font-size: 48px;
+    font-size: 3rem;
 }
 
 #new-products{
     width: 80%;
-    margin: 50px auto;
+    margin: 2rem auto;
     
 }
 
 #new-products ul{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    gap: 1rem;
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 a{
@@ -69,28 +127,54 @@ a{
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 2px 2px 33px 3px rgba(117,117,117,0.64);
+    
+}
+
+.food-items h2{
+    margin: 0 0 1rem 0;
 }
 .food-items img{
-    height: 270px;
+    height: 15rem;
     width: 100%;
     object-fit: cover;
+    list-style: none;
 }
 
 .food-items-text{
     text-align: center;
-    padding: 16px;
+    padding: 1rem;
 }
 
 .btn{
     background-color: #E23744;
     color: white;
-    padding: 8px 24px;
+    padding: 0.5rem 1.5rem;
     border-radius: 4px;
 }
 
 .btn:hover{
     background-color: rgb(255, 0, 17);
 }
+
+@media (max-width: 48rem) {
+
+    #main-header nav{
+        display: none;
+    }
+
+    .menu-btn{
+        display: flex;
+    }
+    
+    main h1{
+        font-size: 1.5rem;
+    }
+    #new-products ul{
+        grid-template-columns: 100%;
+    }
+}
+
+
 
 
 
