@@ -53,7 +53,7 @@ main h1{
 }
 
 #new-products ul{
-    display: flex;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
     padding: 0;
